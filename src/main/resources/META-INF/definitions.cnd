@@ -1,0 +1,21 @@
+<fcnt = 'http://www.jahia.org/jahia/fc/nt/1.0'>
+<fcmix = 'http://www.jahia.org/jahia/fc/mix/1.0'>
+
+//-----------------------------------------------
+// Form Center snippets Definition
+//-----------------------------------------------
+
+[fcnt:calcDefinition] > jnt:content, fcmix:definition, fcmix:blockInput, mix:title, jmix:droppableContent, jmix:hiddenType
+
+//-----------------------------------------------
+// Form Center validations Definition
+//-----------------------------------------------
+
+[fcnt:calcValidation] > jnt:content, fcmix:validation, mix:title, jmix:droppableContent, jmix:hiddenType
+
+//-----------------------------------------------
+// Form Center actions Definition
+//-----------------------------------------------
+
+
+[fcnt:calcRenderer] > jnt:content, jmix:droppableContent, jmix:hiddenType, fcmix:renderer
