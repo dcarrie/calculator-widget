@@ -21,5 +21,6 @@
     <@=data.calc1@><br>
     <@ if(data.calc2 != "") { @>
     <@=data.calc2@><br>
+    <@=data.calc3@>
     <@ } @>
 </calculator>

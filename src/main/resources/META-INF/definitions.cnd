@@ -18,4 +18,6 @@
 //-----------------------------------------------
 
 
+[fcnt:doComputeAction] > jnt:content, fcmix:action, mix:title, jmix:droppableContent, jmix:hiddenType
+
 [fcnt:calcRenderer] > jnt:content, jmix:droppableContent, jmix:hiddenType, fcmix:renderer

@@ -1,87 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <cwtcaclulatorwidget j:dependencies="default siteSettings form-factory-core"
-                           j:modulePriority="0"
-                           j:moduleType="module"
-                           j:title="CWTCaclulatorWidget"
-                           jcr:primaryType="jnt:module">
-                
-                <portlets jcr:primaryType="jnt:portletFolder"/>
+        <cwtcaclulatorwidget j:dependencies="default form-factory-core siteSettings"
+                             j:modulePriority="0"
+                             j:moduleType="module"
+                             j:title="CWTCaclulatorWidget"
+                             jcr:primaryType="jnt:module">
+
+            <portlets jcr:primaryType="jnt:portletFolder"/>
+            <files jcr:primaryType="jnt:folder"/>
+            <contents jcr:primaryType="jnt:contentFolder">
+                <form-factory-definitions jcr:primaryType="jnt:contentFolder">
+                    <calculatorblock jcr:primaryType="fcnt:calcDefinition"
+                                     supportedValidationTypes="address"
+                                     tab="input">
+                        <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Calculator Block"
+                                          label="ID / Name"/>
+                        <label jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              jsonValue="Calculator Block"
+                                              label="Calculator Block label"/>
+                        </label>
+                        <helptext jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              jsonValue="help"
+                                              label="Help Text"/>
+                        </helptext>
+                        <rendererName_id jcr:primaryType="fcnt:definitionOptions"
+                                         jsonValue="rendererName"
+                                         type="hidden">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Renderer name"/>
+                        </rendererName_id>
+                        <calc1_id jcr:primaryType="fcnt:definitionOptions"
+                                  jsonValue="calc1_id"
+                                  type="hidden">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Calc 1 Id"/>
+                        </calc1_id>
+                        <calc1placeholder jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              jsonValue="Calc 1"
+                                              label="Calc 1 Placeholder"/>
+                        </calc1placeholder>
+                        <calc2_id jcr:primaryType="fcnt:definitionOptions"
+                                  jsonValue="calc2_id"
+                                  type="hidden">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Calc 2 Id"/>
+                        </calc2_id>
+                        <calc2placeholder jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              jsonValue="Calc 2"
+                                              label="Calc 2 Placeholder"/>
+                        </calc2placeholder>
+                        <calc3_id jcr:primaryType="fcnt:definitionOptions"
+                                  jsonValue="calc3_id"
+                                  type="hidden">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Calc 3 Id"/>
+                        </calc3_id>
+                        <calc3placeholder jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              jsonValue="Calc 3"
+                                              label="Calc 3 Placeholder"/>
+                        </calc3placeholder>
+                    </calculatorblock>
+                </form-factory-definitions>
+                <form-factory-actions jcr:primaryType="jnt:contentFolder">
+                    <doComputeAction jcr:primaryType="fcnt:doComputeActionn" tab="action">
+                        <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Do Compute Action"
+                                          label="ID / Name"/>
+                        <label jcr:primaryType="fcnt:definitionOptions"
+                               jsonValue="Do compute Action"
+                               type="inputdisabled">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Label Action"/>
+                        </label>
+                        <actionname jcr:primaryType="fcnt:definitionOptions"
+                                    jsonValue="docomputeAction"
+                                    type="inputdisabled">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Action Name"/>
+                        </actionname>
+                        <sendto jcr:primaryType="fcnt:definitionOptions" jsonValue="" type="input">
+                            <j:translation_en jcr:language="en" jcr:primaryType="jnt:translation" label="Send to"/>
+                        </sendto>
+                        <methodtouse jcr:primaryType="fcnt:definitionOptions"
+                                     jsonValue="POST"
+                                     type="inputdisabled">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Method to use"/>
+                        </methodtouse>
+                        <parametername jcr:primaryType="fcnt:definitionOptions" jsonValue="" type="input">
+                            <j:translation_en jcr:language="en"
+                                              jcr:primaryType="jnt:translation"
+                                              label="Parameter name"/>
+                        </parametername>
+                    </doComputeAction>
+                </form-factory-actions>
+
+                <form-factory-renderers jcr:primaryType="jnt:contentFolder">
+                    <calculator-renderer jcr:primaryType="fcnt:calcRenderer" rendererName="calculator">
+                        <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
+                                          jcr:primaryType="jnt:translation"
+                                          jcr:title="Calculator renderer"/>
+                    </calculator-renderer>
+                </form-factory-renderers>
+            </contents>
+            <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
                 <files jcr:primaryType="jnt:folder"/>
-                <contents jcr:primaryType="jnt:contentFolder">
-                    <form-factory-definitions jcr:primaryType="jnt:contentFolder">
-                        <calculatorblock jcr:primaryType="fcnt:calcDefinition"
-                                      supportedValidationTypes="address"
-                                      tab="input">
-                            <j:translation_en jcr:language="en"
-                                              jcr:mixinTypes="mix:title"
-                                              jcr:primaryType="jnt:translation"
-                                              jcr:title="Calculator Block"
-                                              label="ID / Name"/>
-                            <label jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  jsonValue="Calculator Block"
-                                                  label="Calculator Block label"/>
-                            </label>
-                            <helptext jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  jsonValue="help"
-                                                  label="Help Text"/>
-                            </helptext>
-                            <rendererName_id jcr:primaryType="fcnt:definitionOptions"
-                                             jsonValue="rendererName"
-                                             type="hidden">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  label="Renderer name"/>
-                            </rendererName_id>
-                            <calc1_id jcr:primaryType="fcnt:definitionOptions"
-                                         jsonValue="calc1_id"
-                                         type="hidden">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  label="Calc 1 Id"/>
-                            </calc1_id>
-                            <calc1placeholder jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  jsonValue="Calc 1"
-                                                  label="Calc 1 Placeholder"/>
-                            </calc1placeholder>
-                            <calc2_id jcr:primaryType="fcnt:definitionOptions"
-                                         jsonValue="calc2_id"
-                                         type="hidden">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  label="Calc 2 Id"/>
-                            </calc2_id>
-                            <calc2placeholder jcr:primaryType="fcnt:definitionOptionsTranslatable" type="input">
-                                <j:translation_en jcr:language="en"
-                                                  jcr:primaryType="jnt:translation"
-                                                  jsonValue="Calc 2"
-                                                  label="Calc 2 Placeholder"/>
-                            </calc2placeholder>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+            </templates>
 
-
-                        </calculatorblock>
-                    </form-factory-definitions>
-                    <form-factory-renderers jcr:primaryType="jnt:contentFolder">
-                        <calculator-renderer jcr:primaryType="fcnt:calcRenderer" rendererName="calculator">
-                            <j:translation_en jcr:language="en"
-                                              jcr:mixinTypes="mix:title"
-                                              jcr:primaryType="jnt:translation"
-                                              jcr:title="Calculator renderer"/>
-                        </calculator-renderer>
-                    </form-factory-renderers>
-                </contents>
-                <templates j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
-                    <files jcr:primaryType="jnt:folder"/>
-                    <contents jcr:primaryType="jnt:contentFolder"/>
-                </templates>
-                
         </cwtcaclulatorwidget>
     </modules>
 </content>

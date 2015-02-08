@@ -21,7 +21,7 @@
     </label>
     <div class="controls">
         <input type="hidden" value="calculator" name="<@= id @>_block_<@= rendererName_id @>">
-        <input id="<@= calc1_id @>" name="<@= id @>_block_<@= calc1_id @>" type="text" placeholder="<@= calc1placeholder @>"
+        <input id="<@= calc1_id @>" name="<@= id @>_block_<@= calc1_id @>" type="text" placeholder="<@= calc1placeholder @>">
         <@ if(validations != undefined && validations.address) { @> required="required" <@ } @> >
         <span id="<@= id @>_block_<@= calc1_id @>" class="hide help-inline"></span>
     </div>
@@ -29,6 +29,9 @@
         <input id="<@= calc2_id @>" name="<@= id @>_block_<@= calc2_id @>" type="text" placeholder="<@= calc2placeholder @>">
     </div>
 
+    <div class="controls" style="margin-top: 10px;">
+        <input id="<@= calc3_id @>" name="<@= id @>_block_<@= calc3_id @>" type="text" placeholder="<@= calc3placeholder @>">
+    </div>
 
     <div class="controls">
         <@ if (helptext.length > 0) { @>

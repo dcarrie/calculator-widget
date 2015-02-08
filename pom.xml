@@ -85,8 +85,8 @@
   <name>CWTCaclulatorWidget</name>
   <description>This is the custom module (CWTCaclulatorWidget) for running on a Digital Factory server.</description>
   <scm>
-    <connection>scm:dummy:uri</connection>
-    <developerConnection>scm:dummy:uri</developerConnection>
+    <connection>scm:git:git@github.com:dcarrie/calculator-widget.git</connection>
+    <developerConnection>scm:git:git@github.com:dcarrie/calculator-widget.git</developerConnection>
   </scm>
   <repositories>
     <repository>
