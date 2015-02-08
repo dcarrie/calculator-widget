@@ -80,7 +80,7 @@
                     </calculatorblock>
                 </form-factory-definitions>
                 <form-factory-actions jcr:primaryType="jnt:contentFolder">
-                    <doComputeAction jcr:primaryType="fcnt:doComputeActionn" tab="action">
+                    <doComputeAction jcr:primaryType="fcnt:doComputeAction" tab="action">
                         <j:translation_en jcr:language="en"
                                           jcr:mixinTypes="mix:title"
                                           jcr:primaryType="jnt:translation"
