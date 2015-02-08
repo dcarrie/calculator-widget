@@ -117,7 +117,6 @@
                         </parametername>
                     </doComputeAction>
                 </form-factory-actions>
-
                 <form-factory-renderers jcr:primaryType="jnt:contentFolder">
                     <calculator-renderer jcr:primaryType="fcnt:calcRenderer" rendererName="calculator">
                         <j:translation_en jcr:language="en"
