@@ -21,6 +21,22 @@
     <@=data.calc1@><br>
     <@ if(data.calc2 != "") { @>
     <@=data.calc2@><br>
+
+    <script language="JavaScript">
+        <!--
+        function calculateSavings() {
+
+                var x = document.getElementById("data.calc1").value;
+                var y = document.getElementById("data.calc2").value;
+                var z = x + y;
+
+
+        }
+
+        // -->
+    </script>
+
+
     <@=data.calc3@>
     <@ } @>
 </calculator>
