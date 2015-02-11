@@ -18,25 +18,13 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <%--@elvariable id="workspace" type="java.lang.String"--%>
 <calculator>
-    <@=data.calc1@><br>
-    <@ if(data.calc2 != "") { @>
-    <@=data.calc2@><br>
 
-    <script language="JavaScript">
-        <!--
-        function calculateSavings() {
-
-                var x = document.getElementById("data.calc1").value;
-                var y = document.getElementById("data.calc2").value;
-                var z = x + y;
-
-
+    <script>
+        function calculate() {
+            $('#' + <@= calc3_id @>).val(($('#' + <@= calc1_id @>).val() + $('#' + <@= calc2_id @>).val())*0.95);
         }
-
-        // -->
     </script>
 
 
-    <@=data.calc3@>
-    <@ } @>
+
 </calculator>
