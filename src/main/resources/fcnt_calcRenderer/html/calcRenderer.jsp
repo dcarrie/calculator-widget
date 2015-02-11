@@ -25,6 +25,6 @@
         }
     </script>
 
-
+    <@=data.calc3@>
 
 </calculator>
